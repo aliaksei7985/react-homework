@@ -4,10 +4,10 @@ import './App.css';
 function App() {
   return (
     <menu className="App">
-      <li>About</li>
-      <li>Doc</li>
-      <li>Contacts</li>
-      <li>Feedback</li>
+      <li><a className='item' href='#'>Goods</a></li>
+      <li><a className='item' href='#'>Discount</a></li>
+      <li><a className='item' href='#'>Contacts</a></li>
+      <li><a className='item' href='#'>Cart</a></li>
     </menu>
   );
 }
