@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
-import NewApp from './NewApp';
+import NewApp from './components/NewApp/NewApp';
+import Card from './components/card/card';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App/>
     <NewApp/>
+    <Card/>
   </React.StrictMode>
 );
 
