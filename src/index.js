@@ -12,8 +12,8 @@ root.render(
     <App
       item1='docs'
       item2='goods'
-      item3='goods'
-      item4='goods'
+      item3='contacts'
+      item4='cart'
       />
     <NewApp/>
     <Card 
