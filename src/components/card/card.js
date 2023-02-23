@@ -14,7 +14,7 @@ export default function Card ({url, name, capital, lang, currency}) {
               Languages: {lang}
             </p>
             <p className="country__currency">
-              Australian {currency}
+              {currency}
             </p>
         </div>
     )
