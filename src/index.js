@@ -23,6 +23,13 @@ root.render(
       lang='eng'
       currency='dollar'
       />
+      <Card 
+      url='https://flagcdn.com/w320/be.png'
+      name='belg'
+      capital='luxembourg'
+      lang='german'
+      currency='euro'
+      />
   </React.StrictMode>
 );
 
