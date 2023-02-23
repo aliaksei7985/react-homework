@@ -1,12 +1,12 @@
 import './App.css';
 
-function App() {
+function App({item1, item2, item3, item4}) {
   return (
     <menu className="App">
-      <li><a className='item' href='#'>Goods</a></li>
-      <li><a className='item' href='#'>Discount</a></li>
-      <li><a className='item' href='#'>Contacts</a></li>
-      <li><a className='item' href='#'>Cart</a></li>
+      <li><a className='item' href='#'>item1</a></li>
+      <li><a className='item' href='#'>item2</a></li>
+      <li><a className='item' href='#'>item3</a></li>
+      <li><a className='item' href='#'>item4</a></li>
     </menu>
   );
 }

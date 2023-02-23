@@ -9,9 +9,20 @@ import Card from './components/card/card';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
+    <App
+      item1='docs'
+      item2='goods'
+      item3='goods'
+      item4='goods'
+      />
     <NewApp/>
-    <Card/>
+    <Card 
+      url='https://flagcdn.com/w320/au.png'
+      name='aus'
+      capital='sydnei'
+      lang='eng'
+      currency='dollar'
+      />
   </React.StrictMode>
 );
 
