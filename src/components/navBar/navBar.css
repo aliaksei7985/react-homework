@@ -1,0 +1,15 @@
+.item {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav {
+    margin: 20px auto;
+    padding: 15px 0;
+    max-width: 1270px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: rgb(240, 41, 41);
+    font-weight: 900;
+  }

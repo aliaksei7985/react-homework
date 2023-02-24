@@ -1,8 +1,8 @@
-import './App.css';
+import './navBar.css';
 
-function App({item1, item2, item3, item4}) {
+function NavBar({item1, item2, item3, item4}) {
   return (
-    <menu className="App">
+    <menu className="nav">
       <li><a className='item' href='#'>{item1}</a></li>
       <li><a className='item' href='#'>{item2}</a></li>
       <li><a className='item' href='#'>{item3}</a></li>
@@ -11,4 +11,4 @@ function App({item1, item2, item3, item4}) {
   );
 }
 
-export default App;
+export default NavBar;
