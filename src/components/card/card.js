@@ -1,21 +1,25 @@
 import './card.css';
+import React from 'react';
 
-export default function Card ({url, name, capital, lang, currency}) {
+export default class Card extends React.Component {
+  render() {
     return (
         <div className="container">
-            <img src={url} className="country__flag"/>
+            <img src={this.props.data.flags} className="country__flag"/>
             <h3 className="country__name">
-              {name}
+              {this.props.data.name}
             </h3>
             <h4 className="country__capital">
-              {capital}
+              {this.props.data.capital}
             </h4>
             <p className="country__lang">
-              Languages: {lang}
+              Languages: {this.props.data.languages}
             </p>
             <p className="country__currency">
-              {currency}
+              {this.props.data.currencies}
             </p>
         </div>
     )
+  }
+  
 };
