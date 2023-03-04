@@ -3,13 +3,14 @@ import NavBar from './components/navBar/navBar';
 import Card from './components/card/card';
 import NewApp from './components/NewApp/NewApp';
 import Lang from './components/languages/lang';
+import Counter from './components/counter/counter';
 
 const countries = [{
-  name: 'Norway',
-  capital: 'Oslo',
+  name: 'Oslo',
+  capital: 'Norway',
   flags: 'https://flagcdn.com/w320/no.png',
   languages: 'Norwegian',
-  currencies: 'Norwegian crone',
+  currencies: 'crone',
   id: 1,
 },
 {
@@ -35,6 +36,7 @@ function App() {
       {data}
       <NewApp/>
       <Lang/>
+      <Counter />
     </div>
   );
 }
