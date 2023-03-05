@@ -23,8 +23,10 @@ const countries = [{
 },
 ]
 
+
+
 function App() {
-  const data = countries.map(elem => <Card key={elem.id} data={elem}></Card>);
+  const data = countries.map(elem => <Card key={elem.id} data={elem}></Card>);  
   return (
     <div>
       <NavBar
@@ -33,7 +35,9 @@ function App() {
       item3='contacts'
       item4='cart'
       />
-      {data}
+      <div className='wrapper'>
+        {data}
+      </div>
       <NewApp/>
       <Lang/>
       <Counter />

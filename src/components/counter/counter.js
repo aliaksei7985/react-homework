@@ -2,7 +2,7 @@ import React from 'react';
 
 class Counter extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       counter: 0,
     }

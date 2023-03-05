@@ -1,5 +1,6 @@
 import './card.css';
 import React from 'react';
+import InputValue from '../inputValue/inputValue';
 
 export default class Card extends React.Component {
   render() {
@@ -18,6 +19,7 @@ export default class Card extends React.Component {
             <p className="country__currency">
               {this.props.data.currencies}
             </p>
+            <InputValue />
         </div>
     )
   }
