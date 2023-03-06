@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import style from './Login.module.css'
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -20,7 +21,7 @@ class LoginForm extends React.Component {
         return(
             <form>
                 <fieldset>
-                    <p className="item">enter login</p>
+                    <p className={style.item}>enter login</p>
                     <input 
                         type='text'
                         name="login"
@@ -29,7 +30,7 @@ class LoginForm extends React.Component {
                     />
                 </fieldset>
                 <fieldset>
-                    <p className="item">enter password</p>
+                    <p className={style.item}>enter password</p>
                     <input 
                         type='password'
                         name="password"
