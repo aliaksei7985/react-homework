@@ -1,6 +1,6 @@
 import './card.css';
 import React from 'react';
-import InputValue from '../inputValue/inputValue';
+import InputValue from '../InputValue/InputValue';
 
 export default class Card extends React.Component {
   render() {
