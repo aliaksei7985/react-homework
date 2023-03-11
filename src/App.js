@@ -5,6 +5,7 @@ import NewApp from './components/NewApp/NewApp';
 import Lang from './components/languages/lang';
 import Counter from './components/counter/counter';
 import LoginForm from './components/Login/Login';
+import Lesson221 from './components/221lesson/Lesson221';
 
 const countries = [{
   name: 'Oslo',
@@ -28,7 +29,6 @@ const countries = [{
 
 function App() {
   const data = countries.map(elem => <Card key={elem.id} data={elem}></Card>);  
-  const login = <LoginForm></LoginForm>
   return (
     <div>
       <NavBar
@@ -45,7 +45,7 @@ function App() {
       <NewApp/>
       <Lang/>
       <Counter />
-      
+      <Lesson221 />
     </div>
   );
 }

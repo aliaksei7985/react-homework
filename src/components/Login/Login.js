@@ -1,6 +1,18 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import style from './Login.module.css'
+import style from './Login.module.css';
+import styled from "styled-components";
+
+const   Paragraph = styled.p`
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    background-color: white;
+
+    &:hover {
+        border: 2px solid yellow;
+    }
+`
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -21,7 +33,7 @@ class LoginForm extends React.Component {
         return(
             <form>
                 <fieldset>
-                    <p className={style.item}>enter login</p>
+                    <Paragraph>enter login</Paragraph>
                     <input 
                         type='text'
                         name="login"
