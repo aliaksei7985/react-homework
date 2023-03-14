@@ -1,28 +1,27 @@
 import './card.css';
-import { useState } from 'react';
+import React from 'react';
+import InputValue from '../InputValue/InputValue';
 
-export default function Card(props) {
-  const [count, setCount] = useState(0);
-
+export default class Card extends React.Component {
+  render() {
     return (
         <div className="container">
-            <img src={props.data.flags} className="country__flag"/>
+            <img src={this.props.data.flags} className="country__flag"/>
             <h3 className="country__name">
-              {props.data.name}
+              {this.props.data.name}
             </h3>
             <h4 className="country__capital">
-              {props.data.capital}
+              {this.props.data.capital}
             </h4>
             <p className="country__lang">
-              Languages: {props.data.languages}
+              Languages: {this.props.data.languages}
             </p>
             <p className="country__currency">
-              {props.data.currencies}
+              {this.props.data.currencies}
             </p>
-            <p>Вы нажали {count} раз</p>
-            <button onClick={() => setCount(count + 1)}>
-              Нажми на меня
-            </button>
+            <InputValue />
         </div>
     )
   }
+  
+};
