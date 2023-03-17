@@ -1,14 +1,11 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
-class Fetch extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            comment: '',
-        }
-    }
 
-    componentDidMount() {
+function Fetch(props) {
+    const   [comment, setComment] = useState('');
+    const   {postId, id, name, email, body} = comment;
+
+    useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/comments')
                     .then(res => {
                         if (!res.ok) {
@@ -17,25 +14,20 @@ class Fetch extends React.Component {
                         return res.json()
                     })
                     .then((data) => {
-                        this.setState({
-                            comment: data[0],
-                        })
+                        setComment(data[1])
                     })
                     .catch(e => e)
-    }
+    }, [comment]);
 
-    render() {
-        const   {postId, id, name, email, body} = this.state.comment;
-        return(
-            <div>
-                <p>comment's id: {postId}</p>
-                <p>commentator's id: {id}</p>
-                <p>commentator's name: {name}</p>
-                <p>commentator's email: {email}</p>
-                <p>comment's content: {body}</p>
-            </div>
-        )
-    }
+    return(
+        <div>
+            <p>comment's id: {postId}</p>
+            <p>commentator's id: {id}</p>
+            <p>commentator's name: {name}</p>
+            <p>commentator's email: {email}</p>
+            <p>comment's content: {body}</p>
+        </div>
+    )
 }
 
 export default Fetch;
