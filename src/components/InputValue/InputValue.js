@@ -1,33 +1,23 @@
-import React from "react";
+import { useState } from "react";
 
-class InputValue extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            visited: '',
-            date: 12,
-        }
-    }
+function InputValue() {
 
-    handleChange(e, season) {
-        console.log(season);
-        this.setState({
-            visited: e.target.value
-        })
-    }
+    const   [date, setDate] = useState();
+
+    function handleChange(date) {
+        setDate(date)
+    };
     
-    render() {
-        return(
-            <form>
-                <label>when have you visited this coutry</label>
-                <input type='text' onChange={
-                    (e) => {this.handleChange(e, 'winter')}
-                    }/>
-                <p >{this.state.visited}</p>
-                <p>{this.state.date}</p>
-            </form>
-        )
-    }
+    return(
+        <form>
+            <p>{document.title}</p>
+            <label>when have you visited this coutry</label>
+            <input type='text' onChange={
+                (e) => {handleChange(e.target.value)}
+                }/>
+            <p >{date}</p>
+        </form>
+    )
 };
 
 export default InputValue;
