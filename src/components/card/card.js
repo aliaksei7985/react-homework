@@ -19,6 +19,7 @@ export default class Card extends React.Component {
             <p className="country__currency">
               {this.props.data.currencies}
             </p>
+            <a href='#'>ref</a>
             <InputValue />
         </div>
     )

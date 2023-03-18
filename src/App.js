@@ -1,5 +1,8 @@
+import { Routes, Route, Link } from 'react-router-dom';
+
 import './App.css';
 import Card from './components/card/card';
+import InputValue from './components/InputValue/InputValue';
 
 const countries = [{
   name: 'Oslo',
@@ -23,7 +26,14 @@ const countries = [{
 
 function App() {
   return (
-    <Card data={countries[0]}></Card>
+    <>
+      <Routes>
+        <Route path='/' element={<Card data={countries[1]} />}/>
+      </Routes>
+      <Routes>
+        <Route path='/#' element={<InputValue />}/>
+      </Routes>
+    </>
   );
 }
 
