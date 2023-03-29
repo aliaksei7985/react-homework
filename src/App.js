@@ -2,34 +2,48 @@
 
 import './App.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Info from './components/Info/Info';
 import Assignment from './components/Assignment/Assignment';
 import Filter from './components/Filter/Filter';
 import List from './components/List/List';
 
+const data = [
+  {
+    task: 'Learn JS',
+    done: false,
+    id: 0,
+  },
+  {
+    task: 'Learn CSS',
+    done: false,
+    id: 1,
+  },
+  {
+    task: 'Learn React',
+    done: false,
+    id: 2,
+  },
+];
+
 function App() {
-  const data = [
-    {
-      task: 'Learn JS',
-      done: false,
-      id: 1,
-    },
-    {
-      task: 'Learn CSS',
-      done: false,
-      id: 2,
-    },
-    {
-      task: 'Learn React',
-      done: false,
-      id: 3,
-    },
-  ];
+
   const [filter, setFilter] = useState('all');
   const [tasks, setTask] = useState(data);
   const [taskFilter, setTaskFilter] = useState(tasks);
+
+  useEffect(() => {
+    setTaskFilter(() => {
+      switch (filter) {
+          case 'current':
+              return tasks.filter(item => !item.done)
+          case 'done':
+              return tasks.filter(item => item.done)
+          case 'all':
+              return tasks
+      }})
+  }, [filter, tasks])
 
   return (
     <div className='wrapper'>
@@ -38,20 +52,25 @@ function App() {
           tasks={tasks}
         />
       </header>
+
       <main>
         <Filter
           filter={filter}
           setFilter={setFilter}
-          tasks={tasks}
-          setTaskFilter={setTaskFilter}
+
         />
 
         <List
         taskFilter={taskFilter}
+
         tasks={tasks}
         setTask={setTask}
         />
-        <Assignment />
+
+        <Assignment
+          tasks={tasks}
+          setTask={setTask}
+        />
       </main>
     </div>
   );
